@@ -31,3 +31,20 @@ You can upload to wed and use as web app.
  - [JSZip](http://stuartk.com/jszip)
 - [Bootstrap](https://getbootstrap.com/)
 -[W3.css](https://www.w3schools.com/w3css/default.asp)
+
+## Screenshots
+
+![App Screenshot](https://github.com/lojik-ng/Bulk-Barcode-QR-Code-Generator-in-HTML/blob/main/screenshots/mobile.png?raw=true)
+
+
+
+![App Screenshot](https://github.com/lojik-ng/Bulk-Barcode-QR-Code-Generator-in-HTML/blob/main/screenshots/mobile1.png?raw=true)
+
+
+
+![App Screenshot](https://github.com/lojik-ng/Bulk-Barcode-QR-Code-Generator-in-HTML/blob/main/screenshots/mobile2.png?raw=true)
+
+
+
+![App Screenshot](https://github.com/lojik-ng/Bulk-Barcode-QR-Code-Generator-in-HTML/blob/main/screenshots/mobile3.png?raw=true)
+
