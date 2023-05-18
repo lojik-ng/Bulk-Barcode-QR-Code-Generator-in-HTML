@@ -48,3 +48,8 @@ You can upload to wed and use as web app.
 
 ![App Screenshot](https://github.com/lojik-ng/Bulk-Barcode-QR-Code-Generator-in-HTML/blob/main/screenshots/mobile3.png?raw=true)
 
+
+## License
+
+[MIT](https://choosealicense.com/licenses/mit/)
+
