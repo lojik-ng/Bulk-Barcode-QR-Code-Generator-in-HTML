@@ -9,7 +9,8 @@ Upload list of strings from a text file and you can generate barcode with severa
 
 ## Authors
 
-- [@lojik-ng](https://github.com/lojik-ng)
+- [@lojik-ng Leke Ojikutu](https://github.com/lojik-ng)
+- [Adeleke Ojikutu](https://github.com/lojik-ng)
 
 
 ## Deployment
