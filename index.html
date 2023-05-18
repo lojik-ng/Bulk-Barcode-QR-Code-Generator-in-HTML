@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./bootstrap.min.css" rel="stylesheet" />
+    <link href="w3.css" rel="stylesheet" />
+    <script src="./bwip-js-min.js"></script>
+    <style>
+        html,
+        body {
+            margin: 0px;
+            padding: 0px;
+            background-color: rgb(34, 34, 34);
+            color: bisque;
+            overscroll-behavior-y: none;
+        }
+
+        .half {
+            height: 100vh;
+            overflow-y: scroll;
+            max-height: 100vh;
+        }
+        label {
+            min-height: 25px;
+            display: flex;       
+  align-items: flex-end; 
+        }
+
+    </style>
+    <title>Bulk Barcode Generator</title>
+</head>
+
+<body>
+    <div class="w3-row">
+        <div class="w3-half w3-container half">
+            <h3 class="w3-text-white w3-center">Bulk Barcode Generator</h3>
+            
+            <div class="w3-container">
+                <div class="row mt-2">
+                    <div id="mainDiv" class="col-6">
+                        <label class="form-label">Select Text File (One code per line)</label>
+                        <div class="mb-3">
+                            <button onclick="document.getElementById('fileInput').click();"
+                                class="btn w3-amber w3-hover-white w-100">Select file</button>
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <label class="form-label">Generate Barcodes</label>
+                        <div class="mb-3">
+                            <button id="create" class="btn w3-amber w3-hover-white w-100">Create</button>
+                        </div>
+                    </div>
+
+                    </div>
+
+                <label class="form-label mt-1">Select Type</label>
+                <select id="symbol" class="form-select form-select-lg">
+                </select>
+                    <div class="row mt-3">
+                    <div class="col-6">
+
+                        <label for="scale" class="form-label">Quality </label>
+                        <select id="scale" class="form-select form-select-lg">
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                            <option value="7">7</option>
+                            <option value="8">8</option>
+                            <option value="9">9</option>
+                            <option value="10">10</option>
+                        </select>
+                    </div>
+                    <div class="col-6">
+
+                        <label class="form-label">padding: (1 - 100)</label>
+                        <input type="number" value="2" class="form-control form-control-lg" id="border"
+                            placeholder="Enter padding">
+
+                    </div>
+                </div>
+
+                <div class="row mt-3">
+                    <div class="col">
+                        <label class="form-label">Bar/Text Colour</label>
+                        <select id="textcolor" class="form-select form-select-lg">
+                            <option value="000000">Black</option>
+                            <option value="FFFFFF">White</option>
+                            <option value="F1E50E">Yellow</option>
+                            <option value="FF0000">Red</option>
+                            <option value="00FF00">Green</option>
+                            <option value="0000FF">Blue</option>
+                            <option value="FF8F00">Orange</option>
+                        </select>
+
+                    </div>
+                    <div class="col">
+
+                        <label class="form-label">Background Colour</label>
+                        <select id="bkgnd" class="form-select form-select-lg">
+                            <option value="FFFFFF">White</option>
+                            <option value="F1E50E">Yellow</option>
+                            <option value="FF0000">Red</option>
+                            <option value="00FF00">Green</option>
+                            <option value="0000FF">Blue</option>
+                            <option value="FF8F00">Orange</option>
+                            <option value="000000">Black</option>
+                            <option value="">Transparent</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="row mt-3">
+                    <div class="col">
+
+                        <label class="form-label">Include Human Readable Text</label>
+                        <select id="includeText" class="form-select form-select-lg">
+                            <option value="0">No</option>
+                            <option value="1">Yes</option>
+                        </select>
+                    </div>
+                    <div class="col">
+
+
+                        <label class="form-label">Rotate</label>
+                        <select id="rotate" class="form-select form-select-lg">
+                            <option value="N">Normal</option>
+                            <option value="R">Right</option>
+                            <option value="L">Left</option>
+                            <option value="I">Invert</option>
+                        </select>
+                    </div>
+                </div>
+                <div>
+                    <button onclick="download();" class="btn btn-lg w3-amber w3-hover-white w-100 mt-4">Download</button>
+                </div>
+
+
+                <h5 class="mt-4">Loaded contents</h5>
+                <ol id="contents" class="list-group list-group-numbered my-1 ">
+
+                </ol>
+            </div>
+        </div>
+        <div id="display" class="w3-half w3-white w3-container half w3-center">
+            <h4>Preview window</h4>
+        </div>
+    </div>
+    <input class="d-none" type="file" id="fileInput" accept="text/plain" />
+    <script src="./symdesc.js"></script>
+    <script src="./device-uuid.min.js"></script>
+    <script src="./FileSaver.min.js"></script>
+    <script src="./jszip.min.js"></script>
+    <script src="./index.js"></script>
+    <script src="./bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
